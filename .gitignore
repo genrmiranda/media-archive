@@ -2,6 +2,6 @@
 /node_modules
 Homestead.yaml
 Homestead.json
-/public/assets/photos
-/resources/assets/photos
+/public/assets/photos/*
+/resources/assets/photos/*
 .env
