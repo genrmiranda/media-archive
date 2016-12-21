@@ -68,7 +68,7 @@ $ php artisan migrate
 
 ### Assets Folders
 
-Place to process photos in the the _resource/assets/photos_ folder
+Place photos to process in the the _resource/assets/photos_ folder
 * Put your photos under subfolder which will serve as the _Category Name_ of your photos
 
 ```
@@ -135,11 +135,11 @@ Help:
 
 ### Command Example
 ```
-php artisan asset:generate photos --width-sizes=300,800 --count=100 --output-json-doc=true --s3-upload=true
+php artisan asset:generate photos --width-sizes=300,800 --count=10000 --output-json-doc=true --s3-upload=true
 ```
-Command will output:
-* Process 100 photos from the _resources/assets/photos_ folder
-* Resize photos wiht 300 widths and 800 widths (height aspect ratio is automatic)
+Command will:
+* Process 10000 photos from the _resources/assets/photos_ folder
+* Resize photos with 300 widths and 800 widths (height aspect ratio is calculated automatically)
 * Generate JSON document for each photos
 * Upload resized photos _public/assets/photos_ folder to S3 as well
 
@@ -147,9 +147,9 @@ Command will output:
 
 ## JSON Documents
 
-S3 Upload set to true will generate JSON document for each asset which you can import to NoSQL, and Search Engine like Solr and ElasticSearch
+output-json-doc set to true will generate JSON document for each asset which you can import to NoSQL, and Search Engine like Solr and ElasticSearch
 ```
- --s3-upload=true
+ --output-json-doc=true
 ```
 
 Location of generated JSON documents:
